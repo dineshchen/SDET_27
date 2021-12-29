@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="TestRunner-Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.crm.AutoDesk.Org.CreateOrgTest">
+        <methods>
+          <include name="demo"/>
+          <include name="loginToApp"/>
+          <include name="createOrgTest"/>
+          <include name="dbConnection"/>
+          <include name="launchBrowser"/>
+          <include name="logoutTheApp"/>
+          <include name="closeDbConnection"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.crm.AutoDesk.Org.CreateOrgTest -->
+      <class name="com.SDET27.AutoDesk.CreateContact">
+        <methods>
+          <include name="loginToApp"/>
+          <include name="dbConnection"/>
+          <include name="launchBrowser"/>
+          <include name="CreateContacts"/>
+          <include name="logoutTheApp"/>
+          <include name="closeDbConnection"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.SDET27.AutoDesk.CreateContact -->
+    </classes>
+  </test> <!-- TestRunner-Chrome(failed) -->
+  <test thread-count="2" parallel="tests" name="TestRunner-Firefox(failed)">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="com.SDET27.AutoDesk.CreateContactWithOrgTest">
+        <methods>
+          <include name="loginToApp"/>
+          <include name="dbConnection"/>
+          <include name="launchBrowser"/>
+          <include name="logoutTheApp"/>
+          <include name="createContactWithOrgTest"/>
+          <include name="closeDbConnection"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.SDET27.AutoDesk.CreateContactWithOrgTest -->
+      <class name="com.crm.AutoDesk.Org.CreateOrgWithIndustriesAndType">
+        <methods>
+          <include name="loginToApp"/>
+          <include name="dbConnection"/>
+          <include name="launchBrowser"/>
+          <include name="logoutTheApp"/>
+          <include name="closeDbConnection"/>
+          <include name="closeBrowser"/>
+          <include name="createOrgWithIndustriesTest"/>
+        </methods>
+      </class> <!-- com.crm.AutoDesk.Org.CreateOrgWithIndustriesAndType -->
+    </classes>
+  </test> <!-- TestRunner-Firefox(failed) -->
+</suite> <!-- Failed suite [Suite] -->
