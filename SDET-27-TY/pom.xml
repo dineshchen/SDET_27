@@ -44,4 +44,46 @@
   
   
   </dependencies>
+  
+  <profiles>
+   <profile>
+     <id>RegressionSuite</id>
+     <build>
+     <plugins>
+          <!-- Below plug-in is used to execute tests -->
+          <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven_surefire_plugin</artifactId>
+               <version>2.18.1</version>
+               <configuration>
+                   <suiteXmlFiles>
+                        <!-- TestNG suite XML files -->>
+                        <suiteXmlFile>testng_regressionsuite.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    </profile>
+    
+    <profile>
+     <id>SmokeSuite</id>
+     <build>
+     <plugins>
+          <!-- Below plug-in is used to execute tests -->
+          <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven_surefire_plugin</artifactId>
+               <version>2.18.1</version>
+               <configuration>
+                   <suiteXmlFiles>
+                        <!-- TestNG suite XML files -->
+                        <suiteXmlFile>testng_regressionsuite.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    </profile>
+   </profiles>
 </project>
